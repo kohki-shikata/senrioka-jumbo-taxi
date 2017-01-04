@@ -82,6 +82,10 @@ nav {
   @media print {
     display: none;
   }
+  h1 {
+    font-size: 22px;
+    color: #fff;
+  }
 }
 
 #main-nav {
