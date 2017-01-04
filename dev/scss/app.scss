@@ -63,6 +63,12 @@ nav {
   color: #444;
 }
 
+[type=checkbox]:checked, [type=checkbox]:not(:checked) {
+  position: relative;
+  left:0;
+  opacity: 1;
+}
+
 #mobile-nav {
   margin-bottom: 0;
   .button-collapse {

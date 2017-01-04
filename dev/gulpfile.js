@@ -102,6 +102,11 @@ gulp.task('js_single', function() {
   .pipe(browserSync.reload({stream:true}));
 });
 
+gulp.task('copy', function() {
+  gulp.src('CNAME')
+    .pipe(gulp.dest(dest));
+})
+
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
