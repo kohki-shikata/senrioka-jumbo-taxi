@@ -3,9 +3,10 @@ extend elements/_template
 block content
   article
     header.inner
-      h2 千里丘駅前
-      p.desc
-        |千里丘駅前発のジャンボタクシー時刻表です。
+      .title-sec
+        h2 千里丘駅前
+        p.desc
+          |千里丘駅前発のジャンボタクシー時刻表です。
       .row#annotation
         .col.s12.m6.offset-m3
           .card
@@ -17,81 +18,355 @@ block content
                   li.dms 青字　＝　メゾン経由吹田清水行き
                   li.dm5 緑字　＝　メゾン経由メゾン五番街行
                   li.dmm 赤字　＝　メゾン止まり
-
+                p 2013年4月1日改定
     .content-main
-      .col.s12.row#date-selector
-        ul.tabs
-          li.tab.col.s6
-            a(href='#test1') 平日
-          li.tab.col.s6
-            a(href='#test2') 土休祝日
-      #test1.col.s12
-        table.striped.tt
-          tbody
-            tr
-              th: time 06
-              td
-                ol.row
-                  li.dms.col.s1.offset-s7: time 34
-                  li.dm5.col.s1: time 40
-                  li.dms.col.s1: time 46
-                  li.dmm.col.s1: time 52
-                  li.dm5.col.s1: time 59
-            tr
-              th 07
-              td
-                ol.row
-                  li.dms.col.s1.offset-s7: time 34
-                  li.dm5.col.s1: time 40
-                  li.dms.col.s1: time 46
-                  li.dmm.col.s1: time 52
-                  li.dm5.col.s1: time 59
-            tr
-              th 08
-              td
-            tr
-              th 09
-              td
-            tr
-              th 10
-              td
-            tr
-              th 11
-              td
-            tr
-              th 12
-              td
-            tr
-              th 13
-              td
-            tr
-              th 14
-              td
-            tr
-              th 15
-              td
-            tr
-              th 16
-              td
-            tr
-              th 17
-              td
-            tr
-              th 18
-              td
-            tr
-              th 19
-              td
-            tr
-              th 20
-              td
-            tr
-              th 21
-              td
-            tr
-              th 22
-              td
-            tr
-              th 23
-              td
-      #test2.col.s12 土休祝日のデータ
+      #timetable
+        .col.s12.row#date-selector
+          ul.tabs
+            li.tab.col.s6.weekday
+              a(href='#weekday') 平日
+            li.tab.col.s6.holiday
+              a(href='#holiday') 土休祝日
+        #weekday.col.s12
+          table.striped.tt
+            tbody
+              tr
+                th: time 06
+                td
+                  ol.row(style="position:relative")
+                    li.dms(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dm5(style="left: calc(40% / 60 * 100 - 2em)"): time 40
+                    li.dms(style="left: calc(46% / 60 * 100 - 2em)"): time 46
+                    li.dmm(style="left: calc(52% / 60 * 100 - 2em)"): time 52
+                    li.dm5(style="left: calc(59% / 60 * 100 - 2em)"): time 59
+              tr
+                th: time 07
+                td
+                  ol.row
+                    li.dm5(style="left: calc(5% / 60 * 100 - 2em)"): time 5
+                    li.dms(style="left: calc(11% / 60 * 100 - 2em)"): time 11
+                    li.dmm(style="left: calc(17% / 60 * 100 - 2em)"): time 17
+                    li.dms(style="left: calc(24% / 60 * 100 - 2em)"): time 24
+                    li.dm5(style="left: calc(30% / 60 * 100 - 2em)"): time 30
+                    li.dms(style="left: calc(36% / 60 * 100 - 2em)"): time 36
+                    li.dmm(style="left: calc(42% / 60 * 100 - 2em)"): time 42
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+                    li.dm5(style="left: calc(55% / 60 * 100 - 2em)"): time 55
+              tr
+                th: time 08
+                td
+                  ol.row
+                    li.dms(style="left: calc(1% / 60 * 100 - 2em)"): time 1
+                    li.dmm(style="left: calc(7% / 60 * 100 - 2em)"): time 7
+                    li.dms(style="left: calc(14% / 60 * 100 - 2em)"): time 14
+                    li.dm5(style="left: calc(20% / 60 * 100 - 2em)"): time 20
+                    li.dms(style="left: calc(26% / 60 * 100 - 2em)"): time 26
+                    li.dmm(style="left: calc(32% / 60 * 100 - 2em)"): time 32
+                    li.dms(style="left: calc(39% / 60 * 100 - 2em)"): time 39
+                    li.dm5(style="left: calc(45% / 60 * 100 - 2em)"): time 45
+                    li.dms(style="left: calc(51% / 60 * 100 - 2em)"): time 51
+                    li.dmm(style="left: calc(59% / 60 * 100 - 2em)"): time 59
+              tr
+                th: time 09
+                td
+                  ol.row
+                    li.dms(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(26% / 60 * 100 - 2em)"): time 26
+                    li.dms(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dmm(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+                    li.dms(style="left: calc(56% / 60 * 100 - 2em)"): time 56
+              tr
+                th: time 10
+                td
+                  ol.row
+                    li.dms(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(26% / 60 * 100 - 2em)"): time 26
+                    li.dms(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 11
+                td
+                  ol.row
+                    li.dms(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(26% / 60 * 100 - 2em)"): time 26
+                    li.dms(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 12
+                td
+                  ol.row
+                    li.dms(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(26% / 60 * 100 - 2em)"): time 26
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 13
+                td
+                  ol.row
+                    li.dm5(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(26% / 60 * 100 - 2em)"): time 26
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 14
+                td
+                  ol.row
+                    li.dm5(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(26% / 60 * 100 - 2em)"): time 26
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 15
+                td
+                  ol.row
+                    li.dm5(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(26% / 60 * 100 - 2em)"): time 26
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 16
+                td
+                  ol.row
+                    li.dm5(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(26% / 60 * 100 - 2em)"): time 26
+                    li.dms(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 17
+                td
+                  ol.row
+                    li.dms(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(26% / 60 * 100 - 2em)"): time 26
+                    li.dms(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dm5(style="left: calc(44% / 60 * 100 - 2em)"): time 44
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 18
+                td
+                  ol.row
+                    li.dms(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dm5(style="left: calc(14% / 60 * 100 - 2em)"): time 14
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dms(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dm5(style="left: calc(44% / 60 * 100 - 2em)"): time 44
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 19
+                td
+                  ol.row
+                    li.dms(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dm5(style="left: calc(14% / 60 * 100 - 2em)"): time 14
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dms(style="left: calc(27% / 60 * 100 - 2em)"): time 27
+                    li.dms(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dm5(style="left: calc(44% / 60 * 100 - 2em)"): time 44
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+                    li.dms(style="left: calc(57% / 60 * 100 - 2em)"): time 57
+              tr
+                th: time 20
+                td
+                  ol.row
+                    li.dms(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dm5(style="left: calc(14% / 60 * 100 - 2em)"): time 14
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dms(style="left: calc(27% / 60 * 100 - 2em)"): time 27
+                    li.dms(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dm5(style="left: calc(44% / 60 * 100 - 2em)"): time 44
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+                    li.dms(style="left: calc(57% / 60 * 100 - 2em)"): time 57
+              tr
+                th: time 21
+                td
+                  ol.row
+                    li.dms(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dm5(style="left: calc(14% / 60 * 100 - 2em)"): time 14
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dms(style="left: calc(27% / 60 * 100 - 2em)"): time 27
+                    li.dms(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dm5(style="left: calc(44% / 60 * 100 - 2em)"): time 44
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+                    li.dms(style="left: calc(57% / 60 * 100 - 2em)"): time 57
+              tr
+                th: time 22
+                td
+                  ol.row
+                    li.dms(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dm5(style="left: calc(14% / 60 * 100 - 2em)"): time 14
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dms(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dm5(style="left: calc(44% / 60 * 100 - 2em)"): time 44
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+                    li.dms(style="left: calc(53% / 60 * 100 - 2em)"): time 53
+              tr
+                th: time 23
+                td
+                  ol.row
+                    li.dms(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dm5(style="left: calc(13% / 60 * 100 - 2em)"): time 13
+                    li.dms(style="left: calc(33% / 60 * 100 - 2em)"): time 33
+        #holiday.col.s12
+          table.striped.tt
+            tbody
+              tr
+                th: time 06
+                td
+                  ol.row
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 07
+                td
+                  ol.row
+                    li.dm5(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 08
+                td
+                  ol.row
+                    li.dm5(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 09
+                td
+                  ol.row
+                    li.dm5(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 10
+                td
+                  ol.row
+                    li.dm5(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 10
+                td
+                  ol.row
+                    li.dm5(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 11
+                td
+                  ol.row
+                    li.dmm(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dmm(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 12
+                td
+                  ol.row
+                    li.dmm(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 13
+                td
+                  ol.row
+                    li.dmm(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 14
+                td
+                  ol.row
+                    li.dmm(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 15
+                td
+                  ol.row
+                    li.dmm(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 16
+                td
+                  ol.row
+                    li.dmm(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dmm(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 17
+                td
+                  ol.row
+                    li.dmm(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dms(style="left: calc(27% / 60 * 100 - 2em)"): time 27
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+                    li.dms(style="left: calc(57% / 60 * 100 - 2em)"): time 57
+              tr
+                th: time 18
+                td
+                  ol.row
+                    li.dmm(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dms(style="left: calc(27% / 60 * 100 - 2em)"): time 27
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+                    li.dms(style="left: calc(57% / 60 * 100 - 2em)"): time 57
+              tr
+                th: time 19
+                td
+                  ol.row
+                    li.dmm(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dms(style="left: calc(27% / 60 * 100 - 2em)"): time 27
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+                    li.dms(style="left: calc(57% / 60 * 100 - 2em)"): time 57
+              tr
+                th: time 20
+                td
+                  ol.row
+                    li.dmm(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dms(style="left: calc(27% / 60 * 100 - 2em)"): time 27
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 21
+                td
+                  ol.row
+                    li.dmm(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 22
+                td
+                  ol.row
+                    li.dmm(style="left: calc(4% / 60 * 100 - 2em)"): time 4
+                    li.dms(style="left: calc(19% / 60 * 100 - 2em)"): time 19
+                    li.dm5(style="left: calc(34% / 60 * 100 - 2em)"): time 34
+                    li.dms(style="left: calc(49% / 60 * 100 - 2em)"): time 49
+              tr
+                th: time 23
+                td
+      #clock-wrap.hide-on-med-and-down
+        canvas#clock(width="600", height="600")
+        p.text-time

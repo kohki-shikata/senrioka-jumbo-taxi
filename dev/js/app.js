@@ -3,8 +3,7 @@ $(document).ready(function(){
       edge: 'left', // Choose the horizontal origin
     }
   );
+  $('.modal').modal();
 });
 
 $('ul.tabs').tabs('select_tab', 'tab_id');
-
-console.log('hoge');

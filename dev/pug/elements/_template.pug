@@ -6,12 +6,10 @@ html(lang='ja')
     title 千里丘ジャンボタクシー時刻表
     //- CSS
     //- link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/earlyaccess/mplus1p.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/earlyaccess/hannari.css', rel='stylesheet')
     link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
-    link(href='common/css/app.min.css', type='text/css', rel='stylesheet', media='screen,projection')
+    link(href='common/css/app.min.css', type='text/css', rel='stylesheet', media='screen,projection,print')
   body
-    .row.hide-on-med-and-up
-      a(href="#", data-activates="main-nav").button-collapse ≡MENU
     include _nav
     main#main-content
       block content
@@ -19,4 +17,18 @@ html(lang='ja')
           p hogehoge
         - }
     //- Scripts
+    #about.modal
+      .modal-content
+        h2 この時刻表について
+        p この時刻表は、しかたこうきが個人的なHTML/CSS/JSの研究と実益を兼ねて作成したものです。
+        p 時刻表のデータに対する、正当性は一切担保しません。
+        p また、ジャンボタクシーの運営会社である茨城高槻交通社も一切関与していません（いまのところ）。
+      .modal-footer
+        a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') 閉じる
+    #jumbo.modal
+      .modal-content
+        h2 ジャンボタクシーについて
+        p 吹田市は千里丘においては、JR千里丘駅から、住宅街へ向けて、乗合自動車が運行されています。これを地域では「ジャンボタクシー」と呼んでいます。回数券制度であったり、本数が少なかったり、運賃が高額だったり、何かと地域からの不満は耐えないのですが、この地域に住む住民にとっては、無くてはならない大切な存在です。
+      .modal-footer
+        a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') 閉じる
     script(src='common/js/app.min.js')

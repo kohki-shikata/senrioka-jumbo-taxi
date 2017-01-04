@@ -86,7 +86,9 @@ var js_files_single = [
     'bower_components/materialize/js/global.js',
     'bower_components/materialize/js/sideNav.js',
     'bower_components/materialize/js/tabs.js',
-    'js/app.js'
+    'bower_components/materialize/js/modal.js',
+    'js/app.js',
+    'js/clock.js'
 ];
 
 gulp.task('js_single', function() {

@@ -52,15 +52,36 @@ $primary-color: $site-main;
 }
 
 body {
-  font-family: "Mplus 1p";
+  font-family: "Hannari", serif;
   background-color: #e6f4ff;
+  @media print {
+    background-color: transparent;
+  }
 }
 
 nav {
   color: #444;
 }
 
+#mobile-nav {
+  margin-bottom: 0;
+  .button-collapse {
+    height: auto !important;
+    background-color: #fff;
+    color: $site-main;
+    i {
+      margin-right: 1em;
+    }
+  }
+  @media print {
+    display: none;
+  }
+}
+
 #main-nav {
+  @media print {
+    display: none;
+  }
   background-color: $site-main;
   h1 {
     font-size: 20px;
@@ -80,10 +101,13 @@ nav {
     }
   }
   li {
-    background-color: lighten($site-main, 15%);
+    background-color: lighten($site-main, 25%);
     a {
       color: darken($site-main, 25%);
       border-bottom: 1px solid $site-main;
+      &:hover {
+        background-color: rgba(255,255,255,.75);
+      }
     }
     &:last-child {
       a {border-bottom: 0;}
@@ -92,7 +116,7 @@ nav {
 }
 
 #main-content {
-  @media #{$medium-and-up} {
+  @media #{$large-and-up} {
     margin-left: 300px;
   }
   header.inner {
@@ -101,9 +125,32 @@ nav {
     text-align: center;
     padding-top: 35px;
     padding-bottom: 35px;
+
+    .desc {
+      margin-bottom: 1em;
+    }
+
+    @media print {
+      height: 25vh;
+    }
+
+    .title-sec {
+      @media print {
+        width: 50%;
+        float: left;
+      }
+    }
+
+
     h2 {
       font-size: 42px;
     }
+  }
+}
+
+@media print {
+  .content_inner {
+    height: 75vh;
   }
 }
 
@@ -112,6 +159,15 @@ nav {
 }
 
 .tt {
+  @media screen and (max-width: 320px) {
+    th {
+      width: 3em !important;
+      padding: 1em .5em;
+    }
+    ol {
+      margin-left: 3.5em !important;
+    }
+  }
   ol {
     padding-left: 0;
   }
@@ -119,14 +175,80 @@ nav {
     list-style-type: none;
     display: inline-block;
   }
+  @media print {
+    th,td {
+      font-size: 10pt;
+      padding-top: .6em;
+      padding-bottom: .6em;
+    }
+  }
 }
 
 table.striped>tbody>tr:nth-child(odd) {
   background-color: #fafeff;
 }
 
-th {
-  border-right: 1px solid #ddd;
+#holiday {
+  table {
+    background-color: #fbe7ec !important;
+  }
+  table.striped>tbody>tr:nth-child(odd) {
+    background-color: #fffafc;
+  }
+}
+
+.holiday {
+  a {
+    color: #f24 !important;
+  }
+}
+
+.tt {
+  th {
+    border-right: 1px solid #ddd;
+    width: 5em;
+    text-align: center;
+  }
+  ol {
+    position: relative;
+    margin-left: 5em;
+  }
+  li {
+    position: absolute;
+    line-height: 0;
+    font-size: 150%;
+    @media #{$small-and-down} {
+      transform: scale(0.7,1);
+      letter-spacing: -0.1em;
+    }
+    &.dms {
+      &::after {
+        content: "清";
+        font-size: 50%;
+        position: absolute;
+        top: -1em;
+        right: -1em;
+      }
+    }
+    &.dm5 {
+      &::after {
+        content: "五";
+        font-size: 50%;
+        position: absolute;
+        top: -1em;
+        right: -1em;
+      }
+    }
+    &.dmm {
+      &::after {
+        content: "メ";
+        font-size: 50%;
+        position: absolute;
+        top: -1em;
+        right: -1em;
+      }
+    }
+  }
 }
 
 #annotation {
@@ -135,6 +257,11 @@ th {
     font-size: 14px;
     color: $site-main;
     border-right: 1px solid $site-main;
+  }
+
+  @media print {
+    width: 50%;
+    float: right;
   }
 }
 
@@ -148,4 +275,38 @@ th {
 
 .dmm {
   color: red;
+}
+
+#clock {
+
+  width: 100%;
+  &-wrap {
+    text-align: center;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    width: 10vw;
+    @media print {
+      display: none;
+    }
+    .text-time {
+      margin-top: -1em;
+      color: #444;
+      font-weight: 600;
+      text-shadow: 2px 2px 1px #efefef,
+              　    -2px 2px 1px #efefef,
+              　    2px -2px 1px #efefef,
+              　    -2px -2px 1px #efefef;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .time {
+    font-size: 2.7rem;
+    margin-top: 0;
+    .sub {
+      font-size: 1.4rem;
+    }
+  }
 }
