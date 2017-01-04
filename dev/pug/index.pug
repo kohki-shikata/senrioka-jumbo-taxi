@@ -12,20 +12,7 @@ html(lang='ja')
   body
     .row.show-on-small
       a(href="#", data-activates="main-nav").button-collapse ≡MENU
-
-
-    nav#main-nav.side-nav.fixed
-      h1
-        span.wrap
-          i.fa.fa-bus
-        br
-        |千里丘ジャンボタクシー
-        br
-        |時刻表
-      ul
-        li: a(href="#") この時刻表について
-        li: a(href="#") ジャンボタクシーについて
-        li: a(href="#") 千里丘駅 時刻表
+    include elements/_nav
     main#main-content
       - for(var i = 1; i<=100; i++) {
         p hogehoge
