@@ -1,21 +1,97 @@
-!doctype html
-html(lang='ja')
-  head
-    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
-    title 千里丘ジャンボタクシー時刻表
-    //- CSS
-    //- link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/earlyaccess/mplus1p.css', rel='stylesheet')
-    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
-    link(href='common/css/app.min.css', type='text/css', rel='stylesheet', media='screen,projection')
-  body
-    .row.show-on-small
-      a(href="#", data-activates="main-nav").button-collapse ≡MENU
-    include elements/_nav
-    main#main-content
-      - for(var i = 1; i<=100; i++) {
-        p hogehoge
-      - }
-    //- Scripts
-    script(src='common/js/app.min.js')
+extend elements/_template
+
+block content
+  article
+    header.inner
+      h2 千里丘駅前
+      p.desc
+        |千里丘駅前発のジャンボタクシー時刻表です。
+      .row#annotation
+        .col.s12.m6.offset-m3
+          .card
+            .card-content.black-text.row
+              .col.s2
+                h3 備考
+              .col.s10
+                ul
+                  li.dms 青字　＝　メゾン経由吹田清水行き
+                  li.dm5 緑字　＝　メゾン経由メゾン五番街行
+                  li.dmm 赤字　＝　メゾン止まり
+
+    .content-main
+      .col.s12.row#date-selector
+        ul.tabs
+          li.tab.col.s6
+            a(href='#test1') 平日
+          li.tab.col.s6
+            a(href='#test2') 土休祝日
+      #test1.col.s12
+        table.striped.tt
+          tbody
+            tr
+              th: time 06
+              td
+                ol.row
+                  li.dms.col.s1.offset-s7: time 34
+                  li.dm5.col.s1: time 40
+                  li.dms.col.s1: time 46
+                  li.dmm.col.s1: time 52
+                  li.dm5.col.s1: time 59
+            tr
+              th 07
+              td
+                ol.row
+                  li.dms.col.s1.offset-s7: time 34
+                  li.dm5.col.s1: time 40
+                  li.dms.col.s1: time 46
+                  li.dmm.col.s1: time 52
+                  li.dm5.col.s1: time 59
+            tr
+              th 08
+              td
+            tr
+              th 09
+              td
+            tr
+              th 10
+              td
+            tr
+              th 11
+              td
+            tr
+              th 12
+              td
+            tr
+              th 13
+              td
+            tr
+              th 14
+              td
+            tr
+              th 15
+              td
+            tr
+              th 16
+              td
+            tr
+              th 17
+              td
+            tr
+              th 18
+              td
+            tr
+              th 19
+              td
+            tr
+              th 20
+              td
+            tr
+              th 21
+              td
+            tr
+              th 22
+              td
+            tr
+              th 23
+              td
+      #test2.col.s12 土休祝日のデータ

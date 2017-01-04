@@ -82,7 +82,10 @@ var js_files_single = [
     'bower_components/materialize/js/jquery.hammer.js',
     'bower_components/materialize/js/velocity.min.js',
     // 'bower_components/materialize/js/jquery.easing.1.3.js',
+    'bower_components/materialize/js/initial.js',
+    'bower_components/materialize/js/global.js',
     'bower_components/materialize/js/sideNav.js',
+    'bower_components/materialize/js/tabs.js',
     'js/app.js'
 ];
 

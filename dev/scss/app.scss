@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+$site-main: #75aeec;
+$primary-color: $site-main;
+
 // Mixins
 // @import "bower_components/materialize/sass/components/prefixer";
 @import "bower_components/materialize/sass/components/mixins";
@@ -39,11 +42,18 @@
 @import "bower_components/materialize/sass/components/date_picker/default.date";
 @import "bower_components/materialize/sass/components/date_picker/default.time";
 
-$site-main: #75aeec;
+
+*>*:first-child {
+  margin-top: 0;
+}
+
+*>*:last-child {
+  margin-bottom: 0;
+}
 
 body {
   font-family: "Mplus 1p";
-  background-color: #e2f3f5;
+  background-color: #e6f4ff;
 }
 
 nav {
@@ -55,6 +65,7 @@ nav {
   h1 {
     font-size: 20px;
     text-align: center;
+    margin-top: 2.1rem;
     .wrap {
       display: inline-block;
       padding: 1.75em;
@@ -84,5 +95,57 @@ nav {
   @media #{$medium-and-up} {
     margin-left: 300px;
   }
+  header.inner {
+    background-color: darken($site-main, 25%);
+    color: #fff;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    h2 {
+      font-size: 42px;
+    }
+  }
+}
 
+#date-selector {
+  margin-bottom: 0;
+}
+
+.tt {
+  ol {
+    padding-left: 0;
+  }
+  li {
+    list-style-type: none;
+    display: inline-block;
+  }
+}
+
+table.striped>tbody>tr:nth-child(odd) {
+  background-color: #fafeff;
+}
+
+th {
+  border-right: 1px solid #ddd;
+}
+
+#annotation {
+  text-align: left;
+  h3 {
+    font-size: 14px;
+    color: $site-main;
+    border-right: 1px solid $site-main;
+  }
+}
+
+.dms {
+  color: blue;
+}
+
+.dm5 {
+  color: green;
+}
+
+.dmm {
+  color: red;
 }
