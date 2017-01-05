@@ -15,26 +15,35 @@ block content
                 h3 備考
               .col.s10
                 ul
-                  li.dms.selector
-                    .switch
-                      label
-                        input(type="checkbox", checked)
-                        span.lever
-                        |青字　＝　メゾン経由吹田清水行き
-                  li.dm5.selector
-                    .switch
-                      label
-                        input(type="checkbox", checked)
-                        span.lever
-                        |緑字　＝　メゾン経由メゾン五番街行
-                  li.dmm.selector
-                    .switch
-                      label
-                        input(type="checkbox", checked)
-                        span.lever
-                        |赤字　＝　メゾン止まり
+                  li.dms
+                    |青字　＝　メゾン経由吹田清水行き
+                  li.dm5
+                    |緑字　＝　メゾン経由メゾン五番街行
+                  li.dmm
+                    |赤字　＝　メゾン止まり
                 p 2013年4月1日改定
     .content-main
+      #date-filter
+        ul.collapsible(data-collapsible="expandable")
+          li
+            .collapsible-header.text-center
+              i.fa.fa-filter
+              | 行き先絞り込み表示
+            .collapsible-body.date-filter-body
+              form.row(action="#")
+                .col.s4
+                  input#sel-dms(type="checkbox", checked)
+                  label(for="sel-dms")
+                  span 吹田清水行き
+                .col.s4
+                  input#sel-dm5(type="checkbox", checked)
+                  label(for="sel-dm5")
+                  span メゾン五番街行き
+                .col.s4
+                  input#sel-dmm(type="checkbox", checked)
+                  label(for="sel-dmm")
+                  span メゾン止まり
+
       #timetable
         .col.s12.row#date-selector
           ul.tabs

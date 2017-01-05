@@ -81,12 +81,15 @@ var js_files_single = [
     'bower_components/materialize/js/hammer.min.js',
     'bower_components/materialize/js/jquery.hammer.js',
     'bower_components/materialize/js/velocity.min.js',
-    // 'bower_components/materialize/js/jquery.easing.1.3.js',
+    'bower_components/materialize/js/jquery.easing.1.3.js',
     'bower_components/materialize/js/initial.js',
     'bower_components/materialize/js/global.js',
+    // 'bower_components/materialize/js/dropdown.js',
     'bower_components/materialize/js/sideNav.js',
     'bower_components/materialize/js/tabs.js',
     'bower_components/materialize/js/modal.js',
+    'bower_components/materialize/js/forms.js',
+    'bower_components/materialize/js/collapsible.js',
     'js/app.js',
     'js/clock.js'
 ];

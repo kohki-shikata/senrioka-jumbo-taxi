@@ -326,3 +326,14 @@ table.striped>tbody>tr:nth-child(odd) {
     background-color: blue;
   }
 }
+
+#date-filter {
+  .collapsible-body {
+    text-align: center;
+    // [type="checkbox"] {
+    //   visibility: hidden;
+    // }
+    padding-top: .75em;
+    padding-bottom: .75em;
+  }
+}
