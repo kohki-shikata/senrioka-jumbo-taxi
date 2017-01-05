@@ -320,3 +320,9 @@ table.striped>tbody>tr:nth-child(odd) {
     }
   }
 }
+
+.dms.selector {
+  input[type="checkbox"]:checked + .lever::after {
+    background-color: blue;
+  }
+}
