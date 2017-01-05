@@ -1,0 +1,20 @@
+{
+  "name": "cockpit-lp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Kohki SHIKATA"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/kohki-shikata/senrioka-jumbo-taxi",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.8"
+  }
+}
