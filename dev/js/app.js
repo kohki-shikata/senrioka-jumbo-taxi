@@ -3,6 +3,7 @@ $(document).ready(function(){
       edge: 'left', // Choose the horizontal origin
     }
   );
+  $('.collapsible').collapsible();
   $('.modal').modal();
 });
 
