@@ -90,9 +90,11 @@ var js_files_single = [
     'bower_components/materialize/js/modal.js',
     'bower_components/materialize/js/forms.js',
     'bower_components/materialize/js/collapsible.js',
+    'node_modules/japanese-holidays/lib/japanese-holidays.min.js',
     'js/app.js',
     'js/clock.js',
     'js/filter.js'
+    'js/holiday.js'
 ];
 
 gulp.task('js_single', function() {
