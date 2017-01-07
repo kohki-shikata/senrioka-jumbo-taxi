@@ -89,11 +89,12 @@ function drawTime(ctx, radius){
       hour = hour - 12;
       day = day + 1;
     }
-    if(hour <= 12) {
-      $('#clock-wrap .text-time').html(year + '年' + month + '月' + day + '日 <br>午前' + hour + '時' + minute + '分' + second + '秒');
-    } else {
-      $('#clock-wrap .text-time').html(year + '年' + month + '月' + day + '日 <br>午後' + (hour - 12) + '時' + minute + '分' + second + '秒');
-    }
+    $('#clock-wrap .text-time').html(year + '年' + month + '月' + day + '日 <br>' + hour + '時' + minute + '分' + second + '秒');
+    // if(hour <= 12) {
+    //   $('#clock-wrap .text-time').html(year + '年' + month + '月' + day + '日 <br>午前' + hour + '時' + minute + '分' + second + '秒');
+    // } else {
+    //   $('#clock-wrap .text-time').html(year + '年' + month + '月' + day + '日 <br>午後' + (hour - 12) + '時' + minute + '分' + second + '秒');
+    // }
 
     //hour
     hour=hour%12;
