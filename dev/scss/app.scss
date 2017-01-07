@@ -326,11 +326,69 @@ table.striped>tbody>tr:nth-child(odd) {
   }
 }
 
-
 #footer nav {
   background-color: #9e9e9e;
 }
 
 .btn-wrap {
   text-align: center;
+}
+
+.dms.selector {
+  input[type="checkbox"]:checked + .lever::after {
+    background-color: blue;
+  }
+}
+
+#date-filter {
+  .collapsible-header {
+    text-align: center;
+  }
+  .collapsible-body {
+    text-align: center;
+    [type="checkbox"] {
+      visibility: hidden;
+    }
+    padding-top: .75em;
+    padding-bottom: .75em;
+  }
+  #sel-dms {
+    & + label {
+      color: blue;
+    }
+    & + label:after {
+      border-color: blue;
+    }
+    &:checked {
+      & + label:after {
+        background-color: blue;
+      }
+    }
+  }
+  #sel-dm5 {
+    & + label {
+      color: green;
+    }
+    & + label:after {
+      border-color: green;
+    }
+    &:checked {
+      & + label:after {
+        background-color: green;
+      }
+    }
+  }
+  #sel-dmm {
+    & + label {
+      color: red;
+    }
+    & + label:after {
+      border-color: red;
+    }
+    &:checked {
+      & + label:after {
+        background-color: red;
+      }
+    }
+  }
 }
