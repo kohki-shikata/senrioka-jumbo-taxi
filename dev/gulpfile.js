@@ -91,7 +91,8 @@ var js_files_single = [
     'bower_components/materialize/js/forms.js',
     'bower_components/materialize/js/collapsible.js',
     'js/app.js',
-    'js/clock.js'
+    'js/clock.js',
+    'js/filter.js'
 ];
 
 gulp.task('js_single', function() {

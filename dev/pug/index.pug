@@ -26,23 +26,20 @@ block content
       #date-filter
         ul.collapsible(data-collapsible="expandable")
           li
-            .collapsible-header.text-center
+            .collapsible-header
               i.fa.fa-filter
-              | 行き先絞り込み表示
+              |行き先絞り込み表示
             .collapsible-body.date-filter-body
               form.row(action="#")
                 .col.s4
-                  input#sel-dms(type="checkbox", checked)
-                  label(for="sel-dms")
-                  span 吹田清水行き
+                  input.filled-in#sel-dms(type="checkbox", checked)
+                  label(for="sel-dms") 吹田清水行き
                 .col.s4
-                  input#sel-dm5(type="checkbox", checked)
-                  label(for="sel-dm5")
-                  span メゾン五番街行き
+                  input.filled-in#sel-dm5(type="checkbox", checked)
+                  label(for="sel-dm5") メゾン五番街行き
                 .col.s4
-                  input#sel-dmm(type="checkbox", checked)
-                  label(for="sel-dmm")
-                  span メゾン止まり
+                  input.filled-in#sel-dmm(type="checkbox", checked)
+                  label(for="sel-dmm") メゾン止まり
 
       #timetable
         .col.s12.row#date-selector
