@@ -69,6 +69,10 @@ nav {
   opacity: 1;
 }
 
+.fa {
+  margin-right: .5em;
+}
+
 #mobile-nav {
   margin-bottom: 0;
   .button-collapse {
@@ -107,6 +111,7 @@ nav {
         font-size: 77px;
         color: $site-main;
         top: -.5em;
+        margin-right: 0;
       }
     }
   }
@@ -319,4 +324,13 @@ table.striped>tbody>tr:nth-child(odd) {
       font-size: 1.4rem;
     }
   }
+}
+
+
+#footer nav {
+  background-color: #9e9e9e;
+}
+
+.btn-wrap {
+  text-align: center;
 }
