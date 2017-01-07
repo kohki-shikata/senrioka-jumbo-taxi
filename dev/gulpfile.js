@@ -93,7 +93,7 @@ var js_files_single = [
     'node_modules/japanese-holidays/lib/japanese-holidays.min.js',
     'js/app.js',
     'js/clock.js',
-    'js/filter.js'
+    'js/filter.js',
     'js/holiday.js'
 ];
 
