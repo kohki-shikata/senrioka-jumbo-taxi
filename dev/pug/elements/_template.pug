@@ -24,7 +24,14 @@ html(lang='ja')
         - for(var i = 1; i<=100; i++) {
           p hogehoge
         - }
+      footer#footer
+        nav.row
+          .col.s12.btn-wrap
+            a.btn(onClick="window.print();")
+              span.fa.fa-print
+              | 印刷する
     //- Scripts
+
     #about.modal
       .modal-content
         h2 この時刻表について
